@@ -1,0 +1,24 @@
+﻿@model Product.Model.Sanpham
+@{
+    ViewBag.Title = "Viewcreate";
+}
+
+<h2>Viewcreate</h2>
+
+<div style="margin-left:20%;background-color:sandybrown;width:50%">
+    <form action="/Product/Create" method="post" enctype="multipart/form-data">
+        <label>ID</label>
+        <input type="text" class="form-control" name="getid" />
+        <label>Tên</label>
+        <input type="text" class="form-control" name="Name" />
+        @Html.ValidationMessageFor(m=> m.Name)
+        @*@Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })*@
+        <label>Giá</label>
+        <input type="text" class="form-control" name="getgia" />
+        <label>Ảnh</label>
+        <input type="file" class="form-control" name="getanh" />
+        <label>Chi tiết</label>
+        <input type="text" class="form-control" name="getchitiet" />
+        <button type="submit" class="btn-danger" onclick="clickk()">Tạo</button>
+    </form>
+</div>

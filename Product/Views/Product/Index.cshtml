@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Product.Model.Sanpham>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Tên
+        </th>
+        <th>
+            Giá
+        </th>
+        <th>
+            Ảnh
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Id
+            </td>
+            <td>
+               @item.Name
+            </td>
+
+            <td>
+                @item.Price
+            </td>
+
+            <td>
+                <img src=" @item.Image" width="200px" height="200px" />
+            </td>
+        </tr>
+    }
+</table>
